@@ -83,7 +83,7 @@ export default {
       new FormItemModel({
         formItemType: 1,
         prop: 'temp1',
-        solt: {
+        slot: {
           params: {}
         },
         params: {

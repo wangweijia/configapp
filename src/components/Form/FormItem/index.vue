@@ -1,7 +1,7 @@
 <template>
   <el-form-item v-bind="model.params">
     <template v-if="Components.Input === model.formItemType" >
-      <Input :model="model.soltModel" :form="form" />
+      <Input :model="model.slotModel" :form="form" />
     </template>
   </el-form-item>
 </template>

@@ -11,7 +11,7 @@ export default class FormItemModel extends BaseModel {
   // 表单类型
   formItemType = Compoennts.Null;
   // 表单内部 原型
-  soltModel = undefined;
+  slotModel = undefined;
   // 数据绑定参数
   prop = undefined;
   // 绑定参数
@@ -23,15 +23,15 @@ export default class FormItemModel extends BaseModel {
     const {
       formItemType,
       prop,
-      solt
+      slot
     } = props;
     
     console.log(props);
 
     this.formItemType = formItemType;
     this.prop = prop;
-    this.soltModel = this.initSoltModel({
-      ...solt,
+    this.slotModel = this.initSlotModel({
+      ...slot,
       prop
     });
   }
@@ -42,7 +42,7 @@ export default class FormItemModel extends BaseModel {
   }
 
   // 初始化 内容item
-  initSoltModel(params) {
+  initSlotModel(params) {
     const Model = this.currentFormItem();
     if (Model) {
       return new Model(params);
