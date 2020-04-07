@@ -3,13 +3,13 @@ import Compoennts from '../../../const/Components';
 
 import Input from './formItems/input';
 
-const FormItems = {
+const FormItems: { [key: number]: any; } = {
   [Compoennts.Input]: Input
 }
 
 export default class FormItemModel extends BaseModel {
   // 表单类型
-  formItemType = Compoennts.Null;
+  formItemType:Compoennts = Compoennts.Null;
   // 表单内部 原型
   slotModel = undefined;
   // 数据绑定参数
@@ -17,7 +17,7 @@ export default class FormItemModel extends BaseModel {
   // 绑定参数
   // params = {};
 
-  constructor(props) {
+  constructor(props: any) {
     super(props);
 
     const {
@@ -42,7 +42,7 @@ export default class FormItemModel extends BaseModel {
   }
 
   // 初始化 内容item
-  initSlotModel(params) {
+  initSlotModel(params: any) {
     const Model = this.currentFormItem();
     if (Model) {
       return new Model(params);

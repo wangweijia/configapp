@@ -57,6 +57,7 @@
 <script>
 import FormItem from './FormItem';
 import FormItemModel from './models/formItemModel';
+import Components from '../../const/Components.ts';
 
 export default {
   components: {
@@ -81,7 +82,7 @@ export default {
     this.formItemModels = [
       // 文本输入
       new FormItemModel({
-        formItemType: 1,
+        formItemType: Components.Input,
         prop: 'temp1',
         slot: {
           params: {}
