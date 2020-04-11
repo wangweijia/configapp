@@ -4,6 +4,7 @@
 
 <script>
 export default {
+  name: 'WjInput',
   props: {
     // 数据模型
     model: {

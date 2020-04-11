@@ -1,7 +1,7 @@
 <template>
-  <el-form-item v-bind="model.params">
-    <template v-if="Components.Input === model.formItemType" >
-      <Input :model="model.slotModel" :form="form" />
+  <el-form-item v-bind="model.params" :prop="model.prop" >
+    <template v-if="Components.Input === slotModel.componentItemType" >
+      <Input :model="slotModel" :form="form" />
     </template>
   </el-form-item>
 </template>
@@ -12,6 +12,7 @@ import Components from '../../../const/Components'
 import Input from './items/input';
 
 export default {
+  name: 'WjFormItem',
   components: {
     Input
   },
@@ -31,6 +32,12 @@ export default {
     form: {
       type: Object,
       default: () => ({})
+    }
+  },
+  computed: {
+    // 子控件
+    slotModel() {
+      return this.model.slotModel;
     }
   },
   created() {
