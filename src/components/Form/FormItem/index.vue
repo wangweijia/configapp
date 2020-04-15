@@ -3,6 +3,9 @@
     <template v-if="Components.Input === slotModel.componentItemType" >
       <Input :model="slotModel" :form="form" />
     </template>
+    <template v-else-if="Components.Select === slotModel.componentItemType" >
+      <Select :model="slotModel" :form="form" />
+    </template>
   </el-form-item>
 </template>
 
@@ -10,11 +13,13 @@
 
 import Components from '../../../const/Components'
 import Input from './items/input';
+import Select from './items/select';
 
 export default {
   name: 'WjFormItem',
   components: {
-    Input
+    Input,
+    Select
   },
   data() {
     return {

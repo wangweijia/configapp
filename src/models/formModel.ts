@@ -1,23 +1,9 @@
 import BaseModel from './baseModel';
 import FormItems from './index';
 
-export default class FormItemModel extends BaseModel {
-  // 数据绑定参数
-  prop:any = undefined;
-
+export default class FormModel extends BaseModel {
   constructor(props: any) {
     super(props);
-
-    const {
-      prop,
-    } = props;
-    
-    this.prop = prop;
-  }
-
-  // 获取当前的 表单类型数据模型
-  currentFormItem() {
-    return FormItems[this.componentItemType];
   }
 
   // 初始化 内容item

@@ -1,11 +1,15 @@
 import Components from '../const/Components';
 
-import FormItemModel from './formItemModel';
-import Input from './formItems/input';
+import FormModel from './formModel';
+import FormItemModel from './formItems/formItemModel';
+import InputModel from './formItems/input';
+import SelectModel from './formItems/select';
 
 const FormItems: { [key: number]: any; } = {
+  [Components.Form]: FormModel,
   [Components.FormItem]: FormItemModel,
-  [Components.Input]: Input
+  [Components.Input]: InputModel,
+  [Components.Select]: SelectModel
 }
 
 export default FormItems;

@@ -1,13 +1,7 @@
-import BaseModel from '../baseModel';
+import BaseComponents from './baseComponents';
 
-export default class InputModel extends BaseModel {
-  // // 数据绑定参数
-  prop = undefined;
-
+export default class InputModel extends BaseComponents {
   constructor(props: any) {
     super(props);
-    
-    const { prop } = props;
-    this.prop = prop;
   }
 }

@@ -6,7 +6,9 @@ enum Components {
   // 表单对象
   FormItem = 3,
   // 输入框
-  Input = 4
+  Input = 4,
+  // 选择控件
+  Select = 5
 }
 
 export default Components;
